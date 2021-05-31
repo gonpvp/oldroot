@@ -104,4 +104,5 @@ def panel():
     
     exit()
     
+# LANCH THE SCRIPT    
 panel()
