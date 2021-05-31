@@ -25,7 +25,7 @@ def getconfig(var):
             textlign = config.readline().rstrip()
 
 # filtresearch IMGRU
-def filtresearch(link, number, car, name = 'not-name-defined'):
+def filtresearch(link, number, car):
 
     digits = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
     
@@ -44,7 +44,7 @@ def filtresearch(link, number, car, name = 'not-name-defined'):
     print('Done with a spam of ' + loopint + 'and correct image found' + loopint + '(99% of the images contains weird stuff, creepy stuff, pornographic etc take care of yourself!)')
         
 # nofiltresearch IMGRU
-def nofiltresearch(link, number, car):
+def nofiltresearch(link, number, car, name = 'not-name-defined'):
 
     digits = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
     
@@ -60,7 +60,7 @@ def nofiltresearch(link, number, car):
         html.write('<img alt="'+ str(loopint) + 'Return URL: ' + response + '" src=https://i.imgur.com/' + response + '">\n')
         loopint += 1
     
-    print('Done with a spam of ' + loopint + '(99% of the images do not exist)')
+    print('Done with a spam of ' + str(loopint) + ' images ! (99% of the images do not exist)')
     html.close()        
 
 def panel():
