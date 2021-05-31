@@ -15,3 +15,7 @@ https://user-images.githubusercontent.com/24825008/120231709-42472e00-c252-11eb-
 
 Just cd the file you have cloned 
 type the command run.bat and main.py !
+
+Exemples find with exemple command (the command use is noted in the examples of the command help)
+![exempleload](https://user-images.githubusercontent.com/24825008/120231870-994d0300-c252-11eb-871c-a89df6c08d9a.PNG)
+
