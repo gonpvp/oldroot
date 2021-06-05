@@ -1,2 +1,2 @@
-env\Scripts\activate.bat
-python main.py
+echo "Tape the command to run script: main.py"
+env\Scripts\activate

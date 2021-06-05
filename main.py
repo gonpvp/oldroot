@@ -25,7 +25,7 @@ def getconfig(var):
             textlign = config.readline().rstrip()
 
 # filtresearch IMGRU
-def filtresearch(link, number, car):
+def filtresearch(link, number, car, name = 'not-name-defined'):
 
     digits = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
     
@@ -41,10 +41,10 @@ def filtresearch(link, number, car):
             print('The image with a search of has been found! : https://i.imgur.com/' + response)
             loopint += 1
     
-    print('Done with a spam of ' + loopint + 'and correct image found' + loopint + '(99% of the images contains weird stuff, creepy stuff, pornographic etc take care of yourself!)')
+    print('Done with a spam of ' + str(loopint) + 'and correct image found' + str(loopint) + '(99% of the images contains weird stuff, creepy stuff, pornographic etc take care of yourself!)')
         
 # nofiltresearch IMGRU
-def nofiltresearch(link, number, car, name = 'not-name-defined'):
+def nofiltresearch(link, number, car):
 
     digits = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
     
@@ -60,7 +60,7 @@ def nofiltresearch(link, number, car, name = 'not-name-defined'):
         html.write('<img alt="'+ str(loopint) + 'Return URL: ' + response + '" src=https://i.imgur.com/' + response + '">\n')
         loopint += 1
     
-    print('Done with a spam of ' + str(loopint) + ' images ! (99% of the images do not exist)')
+    print('Done with a spam of ' + str(loopint) + '(99% of the images do not exist)')
     html.close()        
 
 def panel():
@@ -89,10 +89,10 @@ def panel():
             print(' ')
         elif command.startswith('filtresearch'):
             searchcommand = command.split(' ')
-            filtresearch(searchcommand[1], searchcommand[2], searchcommand[3])
+            filtresearch(searchcommand[1], searchcommand[2], searchcommand[3], searchcommand[4])
         elif command.startswith('nofiltresearch'):
             searchcommand = command.split(' ')
-            nofiltresearch(searchcommand[1], searchcommand[2], searchcommand[3], searchcommand[4])
+            nofiltresearch(searchcommand[1], searchcommand[2], searchcommand[3])
         elif command == 'hide':
             os.system('cls')
             break
