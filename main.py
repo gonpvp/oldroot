@@ -24,6 +24,29 @@ def getconfig(var):
                     
             textlign = config.readline().rstrip()
 
+
+# nofiltresearch IMGRU
+def filtresearchfromlist(fromfile, name, format):
+    dirconfig = os.getcwd() + '\\' + fromfile
+    
+    dirhtml = os.getcwd() + '\\' + name + '.html'
+    os.makedirs(os.path.dirname(dirhtml), exist_ok=True)
+    html = open(dirhtml, 'w+', encoding='utf8')
+
+    loopint = 1
+    with open(dirconfig, 'r') as list:
+                
+        textlign = list.readline().rstrip() 
+                        
+        while textlign:
+            html.write('<img alt="'+ str(loopint) + '(return URL): ' + textlign + '" src=https://i.imgur.com/' + textlign + format + '">\n')
+            loopint += 1
+            textlign = list.readline().rstrip()
+
+    print('Done with a spam of ' + str(loopint) + '(99% of the images do not exist)')
+    html.close()       
+                    
+
 # filtresearch IMGRU
 def filtresearch(link, number, car, name = 'not-name-defined'):
 
@@ -82,15 +105,21 @@ def panel():
             print('- nofiltresearch <link> <car> <name>')
             print('exemple: - nofiltresearch ywDgK§.png 2 name test1')
             print(' ')
+            print('Spam search image from list.txt file and generate html response:')
+            print('- filtresearchfromlist <from> <name> <format>')
+            print('exemple: - filtresearchfromlist filename.txt test1 .png')
             print(' ')
             print('Check image from imgru link is exist (attention it is long because it makes requests of packet and no html responnse):')
             print('- filtresearch <link> <car> <name>')
             print('exemple: - filtresearch ywDgK§.png 2 caracters')
             print(' ')
-        elif command.startswith('filtresearch'):
+        elif command.startswith('filtresearchfromlist '):
+            searchcommand = command.split(' ')
+            filtresearchfromlist(searchcommand[1], searchcommand[2], searchcommand[3])
+        elif command.startswith('filtresearch '):
             searchcommand = command.split(' ')
             filtresearch(searchcommand[1], searchcommand[2], searchcommand[3], searchcommand[4])
-        elif command.startswith('nofiltresearch'):
+        elif command.startswith('nofiltresearch '):
             searchcommand = command.split(' ')
             nofiltresearch(searchcommand[1], searchcommand[2], searchcommand[3])
         elif command == 'hide':
