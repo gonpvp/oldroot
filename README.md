@@ -22,7 +22,8 @@ je vous conseille de faire très gaffe à vous, je suis pas responsable de vos a
 
 1. Start file run.bat
 2. Type the command
-   ```help
+   ```
+   help
    ```
 3. And you will have the whole list of possible orders!
 
