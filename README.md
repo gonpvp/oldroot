@@ -23,9 +23,13 @@ je vous conseille de faire très gaffe à vous, je suis pas responsable de vos a
 1. Start file run.bat
 2. Type the command
    ```
+   main.py
+   ```
+3. Type the command
+   ```
    help
    ```
-3. And you will have the whole list of possible orders!
+4. And you will have the whole list of possible orders!
 
 # Run the script
 https://user-images.githubusercontent.com/24825008/120231709-42472e00-c252-11eb-914c-a935110104c0.mp4
