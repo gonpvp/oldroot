@@ -1,5 +1,9 @@
+### What this is ?
+A powerful imgru scrapper that generates possibilities from a list of files, generated or by request, it is used for the famous OldRoot instavigation (tap on the internet to explain)
+
 ### OldRoot Investigation
 Script that makes it much easier to solve the most mysterious OldRoot puzzle in the Minecraft community 
+ENGLISH explication : https://www.youtube.com/watch?v=kUym0u3LfRY
 FRENCH explication : https://www.youtube.com/watch?v=ZGPTtfKb26Y
 
 ## ATTENTION I WARN BEFORE USING THIS SCRIPT !
